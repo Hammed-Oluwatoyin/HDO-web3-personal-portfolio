@@ -9,6 +9,31 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
     position: fixed;
     z-index : 2;
+
+    button {
+            margin-left: 1rem;
+            margin-right: 1rem;
+            background: linear-gradient(180deg, var(--lightPurple) 26.71%, var(--secondary-color) 99.36%);
+            outline: none;
+            border: 1px solid var(--lightPurple);
+            border-radius: 5%;
+            padding:  1rem;
+            box-shadow: 0px 20px 24px 3px #320cf26b;
+                border-radius: 34px;
+                color: #fff;
+
+                @media screen and (max-width: 900px) {
+                        display: none;
+                    }
+        }
+
+        button:hover {
+            background: white;
+            cursor: pointer;
+            border: 1px solid var(--lightPurple);
+            color: var(--lightPurple);
+            
+        }
 }
 
 
@@ -34,24 +59,89 @@
 .app__navbar-links {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items:flex-end;
+    justify-content: flex-end;
+    align-items:center;
     list-style: none;
     
      li {
         margin: 0 1rem;
         cursor: pointer;
+        flex-direction: column;
         div {
             width: 5px;
             height: 5px ;
             background: transparent;
-            border-radius: 50px;
+            border-radius: 50%;
             margin-bottom: 5px;
-            a{
-
-            }
+          
         }
+
+        a{
+        
+              color: var(--gray-color);
+             text-decoration: none;
+             flex-direction: column;
+             text-transform: uppercase;
+             font-weight: bold;
+             transition: all 0.3s ease-in-out;
+             &:hover{
+                color:var(--secondary-color)
+                }
+                  }
+           &:hover {
+            div {
+                background: var(--secondary-color);
+            }
+           }       
         
      }
 
+     
+
+     @media screen and (max-width: 900px) {
+        display: none;
+     }
+
+
+
+
+}
+
+
+
+.app__navbar-menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position : relative;
+
+    display : flex;
+    justify-content: center;
+    align-items : center;
+    background: var(--secondary-color);
+
+    svg {
+        width: 70%;
+        height: 70%;
+        color: var(--white-color);
+    }
+
+    div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        
+        
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+        background-color: red;
+        z-index: 5;
+        display: flex;
+    }
+
+          @media screen and (min-width: 900px) {
+              display: none;
+          }
 }
