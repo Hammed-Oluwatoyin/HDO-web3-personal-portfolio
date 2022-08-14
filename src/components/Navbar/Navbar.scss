@@ -22,18 +22,20 @@
                 border-radius: 34px;
                 color: #fff;
 
+                &:hover {
+                        background: white;
+                        cursor: pointer;
+                        border: 1px solid var(--lightPurple);
+                        color: var(--lightPurple);
+                
+                    }
+
                 @media screen and (max-width: 900px) {
                         display: none;
                     }
         }
 
-        button:hover {
-            background: white;
-            cursor: pointer;
-            border: 1px solid var(--lightPurple);
-            color: var(--lightPurple);
-            
-        }
+       
 }
 
 
@@ -136,9 +138,58 @@
         padding: 1rem;
         width: 80%;
         height: 100vh;
-        background-color: red;
+        background-color: rgb(255, 255, 255) ;
+        
         z-index: 5;
         display: flex;
+        flex-direction:column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        box-shadow: 0px 0px 0px 0.5px gray;
+
+        svg {
+                width :35px;
+                height:35px;
+                margin: 0.5rem 1rem;
+                color: var(--secondary-color)
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            li {
+                    margin: 1rem;
+            
+                    a {
+                        color: var(--gray-color);
+                        text-decoration: none;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        transition: all 0.3s ease-in-out;
+            
+                        &:hover {
+                            color: var(--secondary-color);
+                        }
+                    }
+                }
+        }
+
+              
+      
+                @media screen and (min-width: 900px) {
+                    display: none;
+                }
+       
+        
+        
     }
 
           @media screen and (min-width: 900px) {
