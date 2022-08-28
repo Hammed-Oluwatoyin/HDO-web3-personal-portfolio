@@ -3,6 +3,7 @@ import "./Navbar.scss";
 import {  HiMenuAlt4, HiX } from "react-icons/hi"
 import { motion } from 'framer-motion';
 import {Link} from "react-scroll";
+import Resume from "./Hammed-Blockchain-Resume.pdf"
 
 const Navbar = () => {
    const [toggle, setToggle] = useState(false);
@@ -23,7 +24,9 @@ const Navbar = () => {
          
         ))}
       </ul>
-      <button>Contact</button>
+      
+        <a href = {Resume} download> <button>Download CV</button></a>
+      
 
       <div className="app__navbar-menu">
         
@@ -44,7 +47,7 @@ const Navbar = () => {
          
         ))}
       </ul>
-      <button>Contact</button>
+      
             </motion.div>)}
            
 
