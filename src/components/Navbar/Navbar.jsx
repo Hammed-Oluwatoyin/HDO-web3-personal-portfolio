@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import "./Navbar.scss";
-import { HiMenu, HiMenuAlt4, HiX } from "react-icons/hi"
+import {  HiMenuAlt4, HiX } from "react-icons/hi"
 import { motion } from 'framer-motion';
+import {Link} from "react-scroll";
 
 const Navbar = () => {
    const [toggle, setToggle] = useState(false);
@@ -12,11 +13,14 @@ const Navbar = () => {
       </div>
       
            <ul className="app__navbar-links">
-        {['Home', 'services', 'Experience', 'Portfolio', 'Testimonials'].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+        {['home', 'about', 'work', 'skills','testimonial', 'contact'].map((item) => (
+          <Link spy={true} to={item} smooth={true} activeClass="activeClass" key={item}>
+           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
           </li>
+          </Link>
+         
         ))}
       </ul>
       <button>Contact</button>
@@ -30,11 +34,14 @@ const Navbar = () => {
             >
               <HiX onClick={() => setToggle(false)}/>
                   <ul>
-        {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
-          <li key={item}>
+        {['home', 'about', 'work', 'skills','testimonial', 'contact'].map((item) => (
+           <Link spy={true} to={item} smooth={true} activeClass="activeClass" key={item}>
+           <li key={item} onClick={() => setToggle(false)}>
             
             <a href={`#${item}`}>{item}</a>
           </li>
+          </Link>
+         
         ))}
       </ul>
       <button>Contact</button>

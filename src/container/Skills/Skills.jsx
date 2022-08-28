@@ -9,6 +9,7 @@ import './Skills.scss';
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [showTooltip, setShowTooltip] = useState(true);
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';
@@ -24,7 +25,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
+    <div id="skills">
       <h2 className="head-text">Skills & Experiences</h2>
 
       <div className="app__skills-container">
@@ -86,7 +87,7 @@ const Skills = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
