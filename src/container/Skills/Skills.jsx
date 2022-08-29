@@ -9,7 +9,7 @@ import './Skills.scss';
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
-  const [showTooltip, setShowTooltip] = useState(true);
+  
 
   useEffect(() => {
     const query = '*[_type == "experiences"]';

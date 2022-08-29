@@ -18,7 +18,7 @@ const Navbar = () => {
           <Link spy={true} to={item} smooth={true} activeClass="activeClass" key={item}>
            <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={`${item}`}>{item}</a>
           </li>
           </Link>
          
@@ -32,7 +32,7 @@ const Navbar = () => {
         
             <HiMenuAlt4  onClick={() => setToggle(true)}/>
            {toggle && ( <motion.div 
-            whileInView= {{ x: [300, 0]}} 
+            whileInView= {{ x: [200, 0]}} 
             transition={{duration: 0.85, ease: "easeOut"}}
             >
               <HiX onClick={() => setToggle(false)}/>
@@ -41,7 +41,7 @@ const Navbar = () => {
            <Link spy={true} to={item} smooth={true} activeClass="activeClass" key={item}>
            <li key={item} onClick={() => setToggle(false)}>
             
-            <a href={`#${item}`}>{item}</a>
+            <a href={`${item}`}>{item}</a>
           </li>
           </Link>
          
