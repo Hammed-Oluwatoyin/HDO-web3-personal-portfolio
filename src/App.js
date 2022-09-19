@@ -7,12 +7,12 @@ import "./App.scss";
 const App = () => (
   <div className="app">
     <Navbar />
-    <Header id="home" />
-    <About id="about" />
-    <Work id="work" />
-    <Skills id="skills" />
-    <Testimonial id="testimonial" />
-    <Footer id="contact" />
+    <Header id="#home" />
+    <About id="#about" />
+    <Work id="#work" />
+    <Skills id="#skills" />
+    <Testimonial id="#testimonial" />
+    <Footer id="#contact" />
   </div>
 );
 

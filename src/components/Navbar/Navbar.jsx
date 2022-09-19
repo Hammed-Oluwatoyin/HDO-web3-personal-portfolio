@@ -3,7 +3,7 @@ import "./Navbar.scss";
 import {  HiMenuAlt4, HiX } from "react-icons/hi"
 import { motion } from 'framer-motion';
 import {Link} from "react-scroll";
-import Resume from "./Hammed-Blockchain-Resume.pdf"
+import Resume from "./Hammed-Resume.pdf"
 
 const Navbar = () => {
    const [toggle, setToggle] = useState(false);
